@@ -58,5 +58,5 @@ def update_data():
 @app.route('/health')
 def check_data():
     get_map_data()
-    update_data()
+    #update_data()
     return "App is running"

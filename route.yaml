@@ -1,0 +1,11 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: edge-client
+  namespace: YOUR_NAMESPACE
+spec:
+  to:
+    kind: Service
+    name: edge-client
+  port:
+    targetPort: 5000

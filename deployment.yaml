@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-client
+  namespace: rhn-support-jmarrero-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: edge-client
+  template:
+    metadata:
+      labels:
+        app: edge-client
+    spec:
+      containers:
+      - name: edge-client
+        image: quay.io/YOUR_USER/edge-client:latest
+        ports:
+        - containerPort: 5000
